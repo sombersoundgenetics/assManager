@@ -5,7 +5,7 @@ from xform import rot, trans, cameraMatrix
 import os
 
 class Thumbnail:
-    def __init__(self, source=None, light=".lights.ass", target="thumbnail.jpeg", pan=45, tilt=45, fov=10, res=512, dist=2, overscan=1.25):
+    def __init__(self, source=None, light=".lights.ass", target="thumbnail.jpeg", pan=45, tilt=45, fov=10, res=512, dist=1, quality = 4, overscan=1):
         test = True
         universe = AiUniverse()
 
@@ -14,6 +14,7 @@ class Thumbnail:
         AiNodeSetStr(opt, "outputs", "RGBA RGBA /filter /driver")
         AiNodeSetInt(opt, "xres", int(res))
         AiNodeSetInt(opt, "yres", int(res))
+        AiNodeSetInt(opt, "AA_samples", quality)
 
         #Create filter
         filter = AiNode(universe,"gaussian_filter")

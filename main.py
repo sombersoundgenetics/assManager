@@ -10,15 +10,15 @@ print path.exists(source)
 
 target="thumbnail.jpeg"
 pan=45
-tilt=30
+tilt=45
 fov=10
 res=512
 dist = 1
+quality = 6
 overscan=1
 
-
 AiBegin()
-myThumbnail = thumb.Thumbnail(source,light,target,pan,tilt,fov,res,dist,overscan)
+myThumbnail = thumb.Thumbnail(source,light,target,pan,tilt,fov,res,dist,quality,overscan)
 myThumbnail.render()
 AiEnd()
 

@@ -92,7 +92,7 @@ def cameraMatrix(bounds, pan, tilt, fov, dist):
 
     # solve the z position from the diagonal distance of bounds
     h = np.abs(np.linalg.norm(bounds[0] - bounds[1]))
-    z = (h / 2) / np.tan(np.radians(fov / 2))
+    z = (h / 2) / np.tan(np.radians(fov / 2)) * dist
 
     #solver the center of the bounds
     c = np.multiply(np.add(bounds[0],bounds[1]),0.5)
