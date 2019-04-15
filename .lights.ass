@@ -1,0 +1,75 @@
+### exported: Mon Apr 15 10:08:12 2019
+### from:     Arnold 5.3.0.1 [567ba37e] linux clang-5.0.0 oiio-2.1.0 osl-1.11.0 vdb-4.0.0 clm-1.0.3.513 rlm-12.4.2 optix-6.0.0 2019/03/26 13:40:55
+
+
+
+options
+{
+ xres 640
+ yres 480
+ region_min_x 0
+ region_min_y 0
+ region_max_x 639
+ region_max_y 479
+ camera "gaffer:defaultCamera"
+ plugin_searchpath ":/opt/gaffer-0.53.4.0-linux/appleseed/shaders/appleseed:/opt/gaffer-0.53.4.0-linux/appleseed/shaders/gaffer:/home/shawn/gaffer/shaders:/opt/gaffer-0.53.4.0-linux/shaders:/home/shawn/gaffer/oslCode"
+}
+
+ortho_camera
+{
+ name gaffer:defaultCamera
+ near_clip 0.00999999978
+ far_clip 100000
+ shutter_start 1
+ shutter_end 1
+}
+
+skydome_light
+{
+ name light:/light
+ color light:/light:physical_sky
+ intensity 1
+ exposure 0
+ cast_shadows on
+ cast_volumetric_shadows on
+ shadow_density 1
+ shadow_color 0 0 0
+ samples 1
+ normalize on
+ camera 0
+ transmission 1
+ diffuse 1
+ specular 1
+ sss 1
+ indirect 1
+ max_bounces 999
+ motion_start 0
+ motion_end 1
+ volume_samples 2
+ volume 1
+ aov "default"
+ resolution 1000
+ format "angular"
+ portal_mode "interior_only"
+ aov_indirect off
+}
+
+physical_sky
+{
+ name light:/light:physical_sky
+ turbidity 3
+ ground_albedo 0.100000001 0.100000001 0.100000001
+ use_degrees on
+ elevation 45
+ azimuth 90
+ sun_direction 0 1 0
+ enable_sun on
+ sun_size 0.50999999
+ sun_tint 1 1 1
+ sky_tint 1 1 1
+ intensity 1
+ X 1 0 0
+ Y 0 1 0
+ Z 0 0 1
+}
+
