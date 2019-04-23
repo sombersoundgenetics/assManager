@@ -1,5 +1,4 @@
-#!/home/shawn/PycharmProjects/assManager/venv/bin/python2.7
-
+#!/home/shawn/PycharmProjects/assManager/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
